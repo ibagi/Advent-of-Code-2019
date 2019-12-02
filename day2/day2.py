@@ -2,14 +2,11 @@ import fileinput
 import itertools
 from operator import mul, add
 
-
 def terminate(operandA, operandB):
     pass
 
-
 def parse_program():
     return [int(x) for x in fileinput.input().readline().split(",")]
-
 
 def intcode_program(program, opcodes, instruction_offset=4):
     ip = 0
@@ -24,7 +21,6 @@ def intcode_program(program, opcodes, instruction_offset=4):
         ip += instruction_offset
 
     return program[0]
-
 
 operators = {
     1: (add, True),
